@@ -44,7 +44,6 @@ public class Program {
         System.out.println(machine.saleById(5));
         System.out.println(machine.saleById(7));
 
-
     }
 }
 

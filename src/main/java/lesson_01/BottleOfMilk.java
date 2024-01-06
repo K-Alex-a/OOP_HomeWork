@@ -14,6 +14,7 @@ public class BottleOfMilk extends Product{
         super(id, name, brand, price);
         this.volume = volume;
         this.fat = fat;
+
     }
 
     public void setVolume(int volume) {
