@@ -53,7 +53,7 @@ public class TimeEat {
     private String getInfo(List<Cat> cats) {
         StringBuilder info = new StringBuilder();
         int count = 0;
-        info.append("All cats: \n");
+        info.append("All cats info: \n");
         for (Cat cat : cats) {
             count++;
             info.append("Cat_")
