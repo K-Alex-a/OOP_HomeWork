@@ -1,20 +1,12 @@
 package lesson_04;
 
-public class Apple extends Fruit<FruitData> implements FruitData {
+public class Apple extends Fruit<FruitData> implements FruitData{
 
+    /**
+     * Конструктор
+     */
     public Apple() {
-       super(1f);
+        super("яблоко", 1.0f);
     }
 
-
-    @Override
-    public String toString() {
-        return String.format("Вес яблока: %.2f", getWeight());
-    }
-
-
-    @Override
-    public String getId() {
-        return "яблоко";
-    }
 }

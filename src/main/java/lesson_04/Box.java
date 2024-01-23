@@ -1,7 +1,6 @@
 package lesson_04;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 
 public class Box<T extends Fruit<?>> {
 
@@ -9,88 +8,100 @@ public class Box<T extends Fruit<?>> {
 
     /**
      * Добавление элемента в массив
-     * @param e элемент для добавления в массив
+     * @param e элемент, который будет добавлен
      */
-    public void add(T e) {
-        arrayList.add(++firstIndex, e);
+    public ArrayList<T> add(Fruit<?> e) {
+        arrayList.add((T) e);
+        return arrayList;
     }
 
 
     /**
-     * Показывает элемент массива по индексу
-     *
-     * @param index числовое значение индекса массива
-     * @return элемент массива
+     * Удаление элемента из массива
+     */
+    public T delete() {
+        return  arrayList.remove(getSize()-1);
+    }
+
+
+    /**
+     * Возвращает элемент массива по заданному индексу
+     * @param index индекс
+     * @return элемент из массива
      */
     public T getByIndex(int index) {
         return arrayList.get(index);
     }
 
-
-//    /**
-//     * Считает общий вес коробки
-//     *
-//     * @return общий вес коробки
-//     */
-//    public float sumWeight() {
-//        return arrayList.size() * arrayList.get(firstIndex).getWeight();
-//    }
-
-//    /**
-//     * Показывает общий вес коробки
-//     */
-//    public void getWeightInfo() {
-//        System.out.printf("Общий вес коробки #%d: %.2f\n", idBox, sumWeight());
-//    }
-
+    /**
+     * Считает общий вес элементов, находящихся в массиве (коробке)
+     * @return возвращает общий вес
+     */
     public float getWeight() {
-        return arrayList.size() * arrayList.get(firstIndex).getWeight();
+        if (arrayList.size() == 0) {
+            return 0;
+        } else {
+            return arrayList.size() * arrayList.get(0).getWeight();
+        }
     }
 
-//    public void setWeight(float weight) {
-//        this.weight = weight;
-//    }
-
-//    /**
-//     * Сравнивает 2 коробки
-//     *
-//     * @param o1 the first object to be compared.
-//     * @param o2 the second object to be compared.
-//     * @return true(1) or false(0)
-//     */
-//    @Override
-//    public int compare(Box<T> o1, Box<T> o2) {
-//        return Float.compare(o1.sumWeight(), o2.sumWeight());
-////        if (o1.setWeight() == o2.setWeight()) {
-////            return 1;
-////        } else {
-////            return 0;
-////        }
-//    }
-
+    /**
+     * Вывод информации об общем весе массива (коробки)
+     */
+    public void infoWeight() {
+        System.out.printf("Общий вес коробки #%d: %.2f\n", getIdBox(), getWeight());
+    }
 
     /**
-     * Показывает id коробки
-     * @return id коробки
+     * Сравнение коробок с разными элементами на предмет одинакового веса
+     * @param o передаваемый параметр с массивом (коробкой)
+     * @return true - если коробки равны по весу, false - если вес отличается
      */
-    protected int getIdBox() {
+    public boolean compare(Box<T> o) {
+        if (o.getWeight() == getWeight()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Выдает id коробки
+     * @return id массива (коробки)
+     */
+    public int getIdBox() {
         return idBox;
     }
 
+    /**
+     * Выдает количество элементов в массиве (коробке)
+     * @return количество элементов в массиве
+     */
+    public int getSize() {
+        return arrayList.size();
+    }
+
+    /**
+     * Вывод информации о количестве элементов в массиве (коробке)
+     */
+    public void infoSize() {
+        System.out.printf("Всего в коробке #%d: %d шт. (%s)\n",
+                getIdBox(),
+                getSize(),
+                arrayList.get(0));
+    }
     //endregion
 
 
-    //region Конструкторы
+    //region Конструктор
 
     /**
-     * Конструктор
-     *
-     * @param arrayList массив
+     * Конструктор, создающий новый массив
+     * @param idBox id коробки
      */
-    public Box(ArrayList<T> arrayList) {
-        idBox++;
-        this.firstIndex = -1;
-        this.arrayList = arrayList;
+    public Box(int idBox) {
+        this.arrayList = new ArrayList<>();
+        this.idBox = idBox;
     }
     //endregion
 
@@ -98,22 +109,14 @@ public class Box<T extends Fruit<?>> {
     //region Поля
 
     /**
-     * Массив элементов
+     * Массив для хранения данных
      */
     private ArrayList<T> arrayList;
 
     /**
-     * Первый индекс массива
+     * id коробки
      */
-    private int firstIndex;
-
-    /**
-     * Индекс коробки
-     */
-    private static int idBox;
-
-    private float weight;
-
-
+    private int idBox;
     //endregion
+
 }
