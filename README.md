@@ -28,7 +28,7 @@
 - Продемонстрировать сортировку объектов различного типа с использованием собственного компаратора.
 <br>
 
-**4. Lesson_04:**  ([решение]())
+**4. Lesson_04:**  ([решение](https://github.com/K-Alex-a/OOP_HomeWork/tree/483ae524b35f0fafda656422caab4bc82f4ab551/src/main/java/lesson_04))
 
 - Даны классы Fruit, Apple extends Fruit, Orange extends Fruit;
 - Класс Box, в который можно складывать фрукты. Коробки условно сортируются по типу фрукта,
