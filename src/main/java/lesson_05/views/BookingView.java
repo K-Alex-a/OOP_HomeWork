@@ -1,9 +1,9 @@
-package Seminars.seminar_05.group_2.task_1.views;
+package lesson_05.views;
 
-import Seminars.seminar_05.group_2.task_1.models.Reservation;
-import Seminars.seminar_05.group_2.task_1.models.Table;
-import Seminars.seminar_05.group_2.task_1.presenters.View;
-import Seminars.seminar_05.group_2.task_1.presenters.ViewObserver;
+
+import lesson_05.models.Table;
+import lesson_05.presenters.View;
+import lesson_05.presenters.ViewObserver;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -67,7 +67,7 @@ public class BookingView implements View {
     public void showChangeReservationTableResult(int oldReservation, int reservationNo) {
         if (oldReservation > 0) {
             System.out.printf("Бронь #%d успешно отменена.\n" +
-                    "Новый столик успешно забронирован. Номер брони: #%d\n",
+                            "Новый столик успешно забронирован. Номер брони: #%d\n",
                     oldReservation,
                     reservationNo);
         } else {

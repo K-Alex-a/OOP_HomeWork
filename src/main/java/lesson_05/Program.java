@@ -1,10 +1,9 @@
-package Seminars.seminar_05.group_2.task_1;
+package lesson_05;
 
-import Seminars.seminar_05.group_2.task_1.models.TableService;
-import Seminars.seminar_05.group_2.task_1.presenters.BookingPresenter;
-import Seminars.seminar_05.group_2.task_1.presenters.Model;
-import Seminars.seminar_05.group_2.task_1.presenters.View;
-import Seminars.seminar_05.group_2.task_1.views.BookingView;
+import lesson_05.models.TableService;
+import lesson_05.presenters.BookingPresenter;
+import lesson_05.presenters.Model;
+import lesson_05.views.BookingView;
 
 import java.util.Date;
 

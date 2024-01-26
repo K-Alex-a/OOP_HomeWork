@@ -1,4 +1,4 @@
-package Seminars.seminar_05.group_2.task_1.models;
+package lesson_05.models;
 
 import java.util.Date;
 

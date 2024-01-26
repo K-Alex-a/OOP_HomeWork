@@ -1,6 +1,7 @@
-package Seminars.seminar_05.group_2.task_1.presenters;
+package lesson_05.presenters;
 
-import Seminars.seminar_05.group_2.task_1.models.Table;
+import lesson_05.models.Table;
+
 import java.util.Collection;
 
 public interface View {

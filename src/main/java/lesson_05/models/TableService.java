@@ -1,6 +1,6 @@
-package Seminars.seminar_05.group_2.task_1.models;
+package lesson_05.models;
 
-import Seminars.seminar_05.group_2.task_1.presenters.Model;
+import lesson_05.presenters.Model;
 
 import java.util.ArrayList;
 import java.util.Collection;

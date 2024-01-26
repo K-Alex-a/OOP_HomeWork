@@ -1,4 +1,4 @@
-package Seminars.seminar_05.group_2.task_1.presenters;
+package lesson_05.presenters;
 
 import java.util.Date;
 
