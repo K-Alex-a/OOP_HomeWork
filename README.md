@@ -45,7 +45,9 @@
 - Не забываем про метод добавления фрукта в коробку.
 <br>
 
-**5. Lesson_05:**
+**5. Lesson_05:**   ([решение](https://github.com/K-Alex-a/OOP_HomeWork/tree/35500c43d631bba261f9b800655c9d143364c2a6/src/main/java/lesson_05))
+
+- Доработайте систему бронирования столиков. Метод changeReservationTable должен ЗАРАБОТАТЬ!
 <br>
 
 **6. Lesson_06:**
