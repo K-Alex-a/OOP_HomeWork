@@ -50,7 +50,7 @@
 - Доработайте систему бронирования столиков. Метод changeReservationTable должен ЗАРАБОТАТЬ!
 <br>
 
-**6. Lesson_06:**   ([решение]())
+**6. Lesson_06:**   ([решение](https://github.com/K-Alex-a/OOP_HomeWork/tree/f661c3a188afe59dc5102097a584435bee959a9d/src/main/java/lesson_06))
 
 - Переработать приложение с учетом принципа SPR
 <br>
